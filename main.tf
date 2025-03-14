@@ -1,10 +1,10 @@
-terraform{
-bucket "s3"
-  bucket = "habhaiyes3buckethaiuserkr"
-  ker    = "key/terraform.tfstate"
-  region = "ap-south-1"}
-
-
+terraform {
+  backend "s3" {
+    bucket = "habhaiyes3buckethaiuserkr"
+    key    = "key/terraform.tfstate"
+    region = "ap-south-1"
+  }
+}
 
 
 resource "aws_instance" "AWSServer" {
